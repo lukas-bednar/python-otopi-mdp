@@ -8,6 +8,9 @@ addons:
     packages:
     - git
 install:
-    - pip install tox
+    - pip install tox codecov
 script:
     - tox
+after_success:
+    - codecov
+#    - bash <(curl -s https://codecov.io/bash)
